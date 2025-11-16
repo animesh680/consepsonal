@@ -5,6 +5,9 @@
     font-family: "Poppins", sans-serif;
 
 }
+img{
+    max-width: 100%;
+}
 .container{
     max-width: 1280px;
     margin: auto;
@@ -28,6 +31,7 @@
 }
 .banner-left{
     padding-left: 45px;
+    flex: 1;
 }
 .banner h2{
     font-size: 70px;
@@ -41,6 +45,9 @@
     color: #FFFFFF;
     margin-bottom: 30px;
     max-width: 65%;
+}
+.banner-right{
+    flex: 1;
 }
 .banner-right img{ 
     display: block;
@@ -117,6 +124,16 @@
 
 
 @media (max-width:992px){
+    .container{
+        margin: 0 20px;
+    }
+    .banner h2{
+    font-size: 50px;
+    font-weight:600;
+    line-height: 50px;
+   
+
+}
     .upcoming-matches{
         flex-direction: column;
     }
@@ -126,7 +143,7 @@
         gap: 10px;
         /* bg-colo ; jawar jono bg-col:transparent dile seta cole jabe  */
         background-color:transparent;
-        border: 2px solid tomato ;
+        /* border: 2px solid tomato ; */
         
     }
     .upcoming-matches-left > *{
@@ -135,5 +152,54 @@
     .upcoming-matches-left .btn{
         border: 1px solid rgb(232,232,232) ;
     }
+    /* upcoming-matches-right */
+    .upcoming-matches-right{
+        grid-template-columns: repeat(2,1fr);
+    }
 
 }
+/* mobile divices er jono  */
+@media (max-width:768px){
+     .container{
+        margin: 0 10px;
+    }
+    .banner{
+        flex-direction: column;
+        text-align: center;
+    }
+    .banner .banner-left{
+        margin-bottom: 50px;
+        padding-left: 0;
+        padding-top: 30px;
+    }
+    .banner .banner-left p{
+        /* eita margin auto diye ses kora jabe ono ekta upay seta 
+        chesta korte hobe  */
+        /* max-width: 100%; */
+        margin: 15px auto;
+    }
+    
+    .upcoming-matches{
+        flex-direction: column;
+    }
+    .upcoming-matches-left{
+        flex-direction: column;
+        width: 80%;
+        gap: 20px;
+        /* text-align: center; */
+        margin: 0 auto;
+        /* bg-colo ; jawar jono bg-col:transparent dile seta cole jabe  */
+        /* background-color:transparent; */
+        /* border: 2px solid tomato ; */
+        
+    }
+    /* right er ongso ta kor dite hobe */
+     .upcoming-matches-right{
+        grid-template-columns: repeat(1,1fr);
+        gap: 25px;
+    }
+
+
+}
+
+
